@@ -1,0 +1,28 @@
+﻿<Application x:Class="WpfDemoApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfDemoApp"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="ALinearbrush1" StartPoint="0,0" EndPoint="1 ,1">
+                <GradientStop Color="Pink" Offset="0"></GradientStop>
+                <GradientStop Color="Green" Offset=".25"></GradientStop>
+                <GradientStop Color="MintCream" Offset=".75"></GradientStop>
+                <GradientStop Color="Red" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+            <LinearGradientBrush x:Key="ALinearbrush2" StartPoint=".5,0" EndPoint=".5 ,1">
+                <GradientStop Color="Orange" Offset="0"></GradientStop>
+                <GradientStop Color="White" Offset=".25"></GradientStop>
+                <GradientStop Color="Green" Offset=".75"></GradientStop>
+            </LinearGradientBrush>
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/DemoDictionary.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

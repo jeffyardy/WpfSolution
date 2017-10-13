@@ -1,0 +1,34 @@
+﻿<Window x:Class="WpfDemoApp.Layouts.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemoApp.Layouts"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="300" Width="300">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="20,25,0,0">
+            <Border BorderBrush="Black" BorderThickness="1">
+            <TextBox x:Name="txtuser" Height="23" TextWrapping="Wrap" Text="User ID :" TextAlignment="Right" Padding="0,4,0,0"/>
+            </Border>
+            <TextBox x:Name="txtuserid" Width="150" Height="23" TextWrapping="Wrap" Text=""/>
+            
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="20,25,0,0">
+            <Border BorderBrush="Coral" BorderThickness="1" CornerRadius="3">
+            <TextBox x:Name="txtpass" Height="23" TextWrapping="Wrap" Text="Password :"/>
+            </Border>
+            <PasswordBox x:Name="passwordBox" Width="150"/>
+            
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20,25,0,0">
+            <Button x:Name="button" Content="Login" Width="75"/>
+            <Button x:Name="button1" Content="Cancel" Width="75"/>
+
+        </StackPanel>
+
+
+
+    </StackPanel>
+</Window>

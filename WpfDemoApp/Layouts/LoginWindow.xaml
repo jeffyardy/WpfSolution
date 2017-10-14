@@ -23,7 +23,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="20,25,0,0">
-            <Button x:Name="button" Content="Login" Width="75"/>
+            <Button  Template="{StaticResource EllipseButton}" x:Name="button" Content="Login" Height="75" Width="75"/>
             <Button x:Name="button1" Content="Cancel" Width="75"/>
 
         </StackPanel>

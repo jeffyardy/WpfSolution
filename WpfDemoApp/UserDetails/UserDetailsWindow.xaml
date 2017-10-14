@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfDemoApp.UserDetails.UserDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDemoApp.UserDetails"
+        mc:Ignorable="d"
+        Title="UserDetailsWindow" Height="300" Width="300">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="UserTemplate">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding Username}" Style="{StaticResource DisplayTextBlock}"></TextBlock>
+                    <TextBlock Text="{Binding Age}" Style="{StaticResource RDisplayTextBlock}"></TextBlock>
+                    <TextBlock Text="{Binding FavColor}" Style="{StaticResource DisplayTextBlock}"></TextBlock>
+                    <Rectangle Height="25" Width="50" Fill="{Binding FavColor}"></Rectangle>
+                </StackPanel>
+            </DataTemplate>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"  ></RowDefinition>
+            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="50" ></RowDefinition>
+            <RowDefinition Height="30" ></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"  ></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="username" Grid.Row="0" Grid.Column="0"   Text="User Name" Margin="10"></TextBox>
+        <TextBox x:Name="txtusername" Grid.Row="0" Grid.Column="1" Text="{Binding Username}" Margin="10"></TextBox>
+        <TextBox x:Name="Age" Grid.Row="1" Grid.Column="0" Text="Age" Margin="10"></TextBox>
+        <TextBox x:Name="txtage" Grid.Row="1" Grid.Column="1" Text="{Binding Age}" Margin="10"></TextBox>
+        <TextBox x:Name="favcolor" Grid.Row="2" Grid.Column="0" Text="Fav Color" Margin="10"></TextBox>
+        <TextBox x:Name="txtfavcolor" Grid.Row="2" Grid.Column="1" Text="{Binding FavColor}" Margin="10"></TextBox>
+        <Button x:Name="btnadduser" Grid.Row="3" Grid.Column="1" Content="Add User" Height="25" Width="100" Click="btnadduser_Click"></Button>
+         
+        
+        
+        <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="getuserdetils">
+            <!--<Border Style="{StaticResource CoralBorder}">
+                <TextBlock Text="{Binding XPath=Name}" Style="{StaticResource DisplayTextBlock}"></TextBlock>
+            </Border>
+            <Border Style="{StaticResource BlackBorder}">
+                <TextBlock Text="{Binding XPath=tel}" Style="{StaticResource RDisplayTextBlock}"></TextBlock>
+            </Border>
+            <Border Style="{StaticResource CoralBorder}">
+                <TextBlock Text="{Binding XPath=email}" Style="{StaticResource DisplayTextBlock}"></TextBlock>
+            </Border>-->
+            <ListBox Width="280" Height="75" ItemsSource="{Binding}" ItemTemplate="{StaticResource UserTemplate}" IsSynchronizedWithCurrentItem="True"  ></ListBox>
+        </StackPanel>
+        
+    </Grid>
+</Window>

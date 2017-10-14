@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WpfDemoApp.Assets">
 
-    <RadialGradientBrush x:Key="RedialBrush1" Center=".5,.5" GradientOrigin=".25,.5">
+    <!--<RadialGradientBrush x:Key="RedialBrush1" Center=".5,.5" GradientOrigin=".25,.5">
         <GradientStop Color="Crimson" Offset="0"></GradientStop>
         <GradientStop Color="Blue" Offset="1"></GradientStop>
     </RadialGradientBrush>
@@ -29,9 +29,64 @@
                 </LinearGradientBrush>
             </Setter.Value>
         </Setter>
+    </Style>-->
+
+
+
+    <ControlTemplate TargetType="Button" x:Key="EllipseButton">
+        <Grid>
+            <Ellipse x:Name="MainEllipse" StrokeThickness="2" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" Fill="{TemplateBinding Background}">
+                <Ellipse.Stroke>
+                    <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                        <GradientStop Color="Yellow" Offset="0"></GradientStop>
+                        <GradientStop Color="Red" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </Ellipse.Stroke>
+            </Ellipse>
+            <Ellipse Margin="10">
+                <Ellipse.Fill>
+                    <LinearGradientBrush StartPoint=".5,0" EndPoint=".5,1">
+                        <GradientStop Color="Silver" Offset="0"></GradientStop>
+                        <GradientStop Color="Transparent" Offset=".25"></GradientStop>
+                    </LinearGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>
+            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+        </Grid>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Opacity" Value=".25" TargetName="MainEllipse"></Setter>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+
+    <Style TargetType="TextBlock" x:Key="DisplayTextBlock">
+        <Setter Property="TextAlignment" Value="Left"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="Width" Value="120"></Setter>
+        <Setter Property="Padding" Value="0,4,0,0"></Setter>
     </Style>
 
+    <Style TargetType="TextBlock" x:Key="RDisplayTextBlock">
+        <Setter Property="TextAlignment" Value="Right"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="Width" Value="120"></Setter>
+        <Setter Property="Padding" Value="0,4,0,0"></Setter>
+    </Style>
 
+    <Style TargetType="Border" x:Key="CoralBorder">
+        <Setter Property="BorderBrush" Value="Coral"></Setter>
+        <Setter Property="CornerRadius" Value="5"></Setter>
+        <Setter Property="BorderThickness" Value="2"></Setter>
+     </Style>
+
+
+    <Style TargetType="Border" x:Key="BlackBorder">
+        <Setter Property="BorderBrush" Value="Black"></Setter>
+        <Setter Property="BorderThickness" Value="1"></Setter>
+    </Style>
 
 
 </ResourceDictionary>

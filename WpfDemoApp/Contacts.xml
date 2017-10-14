@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Contacts>
+  <Contact>
+    <Name>Jeff</Name>
+    <tel>9920576193</tel>
+    <email>jeffyardy90@gmail.com</email>
+  </Contact>
+
+  <Contact>
+    <Name>sandy</Name>
+    <tel>9920576193</tel>
+    <email>sandy@gmail.com</email>
+  </Contact>
+
+  <Contact>
+    <Name>riya</Name>
+    <tel>9920576193</tel>
+    <email>riya@gmail.com</email>
+  </Contact>
+
+  <Contact>
+    <Name>cruz</Name>
+    <tel>9920576193</tel>
+    <email>cruz@gmail.com</email>
+  </Contact>
+
+  <Contact>
+    <Name>dom</Name>
+    <tel>997876193</tel>
+    <email>dom@gmail.com</email>
+  </Contact>
+
+  <Contact>
+    <Name>jackson</Name>
+    <tel>9925676193</tel>
+    <email>andy@gmail.com</email>
+  </Contact>
+</Contacts>

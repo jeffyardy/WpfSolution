@@ -55,10 +55,52 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bindings\ContactsXMLWindow.xaml.cs">
+      <DependentUpon>ContactsXMLWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\EligibilityPersonWindow.xaml.cs">
+      <DependentUpon>EligibilityPersonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\Person.cs" />
+    <Compile Include="Bindings\PersonBindingWindow.xaml.cs">
+      <DependentUpon>PersonBindingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\EligibilityConverter.cs" />
+    <Compile Include="Events\BubblingEventWindow.xaml.cs">
+      <DependentUpon>BubblingEventWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Events\TunnlingEventWindow.xaml.cs">
+      <DependentUpon>TunnlingEventWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Styles\ButtonStyleWindow.xaml.cs">
       <DependentUpon>ButtonStyleWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Styles\DataTriggerWindow.xaml.cs">
+      <DependentUpon>DataTriggerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\EllipseButtonWindow.xaml.cs">
+      <DependentUpon>EllipseButtonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Styles\HoverButtonWindow.xaml.cs">
+      <DependentUpon>HoverButtonWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserDetails\UserDetails.cs" />
+    <Compile Include="UserDetails\UserDetailsWindow.xaml.cs">
+      <DependentUpon>UserDetailsWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Assets\DemoDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bindings\ContactsXMLWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bindings\EligibilityPersonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bindings\PersonBindingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -67,6 +109,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Brushes\ButtonBrushWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Events\BubblingEventWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Events\TunnlingEventWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,6 +184,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\DataTriggerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\EllipseButtonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\HoverButtonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserDetails\UserDetailsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -164,6 +230,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Brushes\Penguins.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Contacts.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
